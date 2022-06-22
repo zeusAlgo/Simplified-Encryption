@@ -52,11 +52,11 @@ res = input()
 
 if res == '1':
     print('Please enter message to encrypt')
-    res2 = input()
+    res2 = str(input())
     encrypt(res2)
 elif res == '2':
     print('Please enter message to decrypt')
-    res3 = input()
+    res3 = str(input())
     decrypt(res3)
 else: 'Please try again'
 
