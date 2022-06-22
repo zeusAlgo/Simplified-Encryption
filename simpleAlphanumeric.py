@@ -1,17 +1,17 @@
 from string import ascii_lowercase
 
 
-def encrypt(msg):  # Alphanumeric encryption scheme
+def encrypt(plainText):  # Alphanumeric encryption scheme
     encryptHashmap = {ch: idx for idx, ch in enumerate(ascii_lowercase, 1)}
     encryptHashmap[' '] = ' '
-    res = ' '.join(str(encryptHashmap[ch]) for ch in msg.lower())
+    res = ' '.join(str(encryptHashmap[ch]) for ch in plainText.lower())
     print(res); return res
 
 
-def decrypt(cipher):  # Decryption
+def decrypt(cipherText):  # Decryption
     decryptHashmap = {idx: ch for idx, ch in enumerate(ascii_lowercase, 1)}
     decryptHashmap[' '] = ' '
-    res = ' '.join(decryptHashmap[int(ch)] for ch in cipher.split())
+    res = ' '.join(decryptHashmap[int(ch)] for ch in cipherText.split())
     print(res); return res
 
 
