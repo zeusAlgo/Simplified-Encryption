@@ -46,8 +46,7 @@ def decrypt(cipher):  # Decryption
 # Enter Your Prime
 
 print('Please enter one of the following: \n 1 or 2')
-print('1 = Encrypt')
-print('2 = Decrypt')
+print('1 = Encrypt \n 2 = Decrypt')
 res1 = input()
 
 if res1 == '1':
