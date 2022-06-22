@@ -17,13 +17,13 @@ def decrypt(cipher):  # Decryption
 
 print('Please enter one of the following: \n 1 or 2 \n')
 print('1 = Encrypt \n2 = Decrypt')
-res1 = input()
+res1 = input().strip()
 
 if res1 == '1':
-    print('Please enter message to encrypt')
+    print('Please enter plain text to encrypt')
     encrypt(input())
 elif res1 == '2':
-    print('Please enter message to decrypt')
+    print('Please enter cipher text to decrypt')
     decrypt(str(input()))
 else: 'Please try again'
 
