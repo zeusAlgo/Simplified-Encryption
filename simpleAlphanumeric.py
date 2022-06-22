@@ -15,6 +15,21 @@ def decrypt(cipher):  # Decryption
     res = ' '.join(decryptHashmap[int(ch)] for ch in cipher.split())
     print(res); return res
 
+
+print('Please enter one of the following: \n 1 or 2')
+print('1 = Encrypt \n 2 = Decrypt')
+res1 = input()
+
+if res1 == '1':
+    print('Please enter message to encrypt')
+    res2 = str(input())
+    encrypt(res2)
+elif res1 == '2':
+    print('Please enter message to decrypt')
+    res3 = str(input())
+    decrypt(res3)
+else: 'Please try again'
+
 # def isPrime(x):  # primes
 #     if x > 1:
 #         for num in range(2, int(sqrt(x)) + 1):
@@ -44,20 +59,4 @@ def decrypt(cipher):  # Decryption
 
 
 # Enter Your Prime
-
-print('Please enter one of the following: \n 1 or 2')
-print('1 = Encrypt \n 2 = Decrypt')
-res1 = input()
-
-if res1 == '1':
-    print('Please enter message to encrypt')
-    res2 = str(input())
-    encrypt(res2)
-elif res1 == '2':
-    print('Please enter message to decrypt')
-    res3 = str(input())
-    decrypt(res3)
-else: 'Please try again'
-
-
 
