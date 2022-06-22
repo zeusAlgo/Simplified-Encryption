@@ -2,16 +2,16 @@ from string import ascii_lowercase
 
 
 def encrypt(plainText):  # Alphanumeric encryption scheme
-    encryptHashmap = {ch: idx for idx, ch in enumerate(ascii_lowercase, 1)}
+    encryptHashmap = {char: idx for idx, char in enumerate(ascii_lowercase, 1)}
     encryptHashmap[' '] = ' '
-    res = ' '.join(str(encryptHashmap[ch]) for ch in plainText.lower())
+    res = ' '.join(str(encryptHashmap[char]) for char in plainText.lower())
     print(res); return res
 
 
 def decrypt(cipherText):  # Decryption
-    decryptHashmap = {idx: ch for idx, ch in enumerate(ascii_lowercase, 1)}
+    decryptHashmap = {idx: char for idx, char in enumerate(ascii_lowercase, 1)}
     decryptHashmap[' '] = ' '
-    res = ' '.join(decryptHashmap[int(ch)] for ch in cipherText.split())
+    res = ' '.join(decryptHashmap[int(char)] for char in cipherText.split())
     print(res); return res
 
 
