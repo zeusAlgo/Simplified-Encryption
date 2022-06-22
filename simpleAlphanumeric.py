@@ -2,8 +2,8 @@ from string import ascii_lowercase
 
 
 def encrypt(msg):  # Alphanumeric encryption scheme
-    keys = [ch for ch in ascii_lowercase]
-    encryptHashmap = dict(zip(keys, list(range(1, 27)))); encryptHashmap[' '] = ' '
+    encryptHashmap = {char: idx for idx, char in enumerate(ascii_lowercase, 1)}
+    encryptHashmap[' '] = ' '
     res = ' '.join(str(encryptHashmap[ch]) for ch in msg.lower())
     print(res); return res
 
@@ -15,18 +15,16 @@ def decrypt(cipher):  # Decryption
     print(res); return res
 
 
-print('Please enter one of the following: \n 1 or 2')
-print('1 = Encrypt \n 2 = Decrypt')
+print('Please enter one of the following: \n 1 or 2 \n')
+print('1 = Encrypt \n2 = Decrypt')
 res1 = input()
 
 if res1 == '1':
     print('Please enter message to encrypt')
-    res2 = str(input())
-    encrypt(res2)
+    encrypt(input())
 elif res1 == '2':
     print('Please enter message to decrypt')
-    res3 = str(input())
-    decrypt(res3)
+    decrypt(str(input()))
 else: 'Please try again'
 
 # def isPrime(x):  # primes
