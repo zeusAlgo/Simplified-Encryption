@@ -2,15 +2,15 @@ from string import ascii_lowercase
 
 
 def encrypt(msg):  # Alphanumeric encryption scheme
-    encryptHashmap = {char: idx for idx, char in enumerate(ascii_lowercase, 1)}
+    encryptHashmap = {ch: idx for idx, ch in enumerate(ascii_lowercase, 1)}
     encryptHashmap[' '] = ' '
     res = ' '.join(str(encryptHashmap[ch]) for ch in msg.lower())
     print(res); return res
 
 
 def decrypt(cipher):  # Decryption
-    vals = [ch for ch in ascii_lowercase]
-    decryptHashmap = dict(zip(list(range(1, 27)), vals)); decryptHashmap[' '] = ' '
+    decryptHashmap = {idx: ch for idx, ch in enumerate(ascii_lowercase, 1)}
+    decryptHashmap[' '] = ' '
     res = ' '.join(decryptHashmap[int(ch)] for ch in cipher.split())
     print(res); return res
 
