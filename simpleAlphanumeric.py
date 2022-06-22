@@ -48,13 +48,13 @@ def decrypt(cipher):  # Decryption
 print('Please enter one of the following: \n 1 or 2')
 print('1 = Encrypt')
 print('2 = Decrypt')
-res = input()
+res1 = input()
 
-if res == '1':
+if res1 == '1':
     print('Please enter message to encrypt')
     res2 = str(input())
     encrypt(res2)
-elif res == '2':
+elif res1 == '2':
     print('Please enter message to decrypt')
     res3 = str(input())
     decrypt(res3)
