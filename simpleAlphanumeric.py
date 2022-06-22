@@ -50,8 +50,12 @@ print('1 = Encrypt')
 print('2 = Decrypt')
 res = input()
 
-if res == '1': print('Please enter message to encrypt')
-elif res == '2': print('Please enter message to decrypt')
+if res == '1':
+    print('Please enter message to encrypt')
+    encrypt(input())
+elif res == '2':
+    print('Please enter message to decrypt')
+    decrypt(input())
 else: 'Please try again'
 
 
