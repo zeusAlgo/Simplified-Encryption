@@ -15,34 +15,44 @@ def decrypt(cipher):  # Decryption
     res = ' '.join(decryptHashmap[int(ch)] for ch in cipher.split())
     print(res); return res
 
-
-def isPrime(x):  # primes
-    if x > 1:
-        for num in range(2, int(sqrt(x)) + 1):
-            if x % num == 0: return False
-        return True
-    return False
-
-
-primes = [val for val in range(1, 27) if isPrime(val)]
+# def isPrime(x):  # primes
+#     if x > 1:
+#         for num in range(2, int(sqrt(x)) + 1):
+#             if x % num == 0: return False
+#         return True
+#     return False
 
 
-def closestPrimes(cipher):
-    cipherArr = [int(string) for string in cipher.split()]
-    primeAr = []
-    for idx, val in enumerate(cipherArr):
-        sIdx, eIdx = 0, len(primes) - 1
-        while sIdx <= eIdx:
-            mIdx = (sIdx + eIdx) // 2
-            mVal = primes[mIdx]
-            # TODO: FINISH BSRXH
-            # if mVal == val:
+# primes = [val for val in range(1, 27) if isPrime(val)]
+#
+#
+# def closestPrimes(cipher):
+#     cipherArr = [int(string) for string in cipher.split()]
+#     primeAr = []
+#     for idx, val in enumerate(cipherArr):
+#         sIdx, eIdx = 0, len(primes) - 1
+#         while sIdx <= eIdx:
+#             mIdx = (sIdx + eIdx) // 2
+#             mVal = primes[mIdx]
+#             # TODO: FINISH BSRXH
+#             # if mVal == val:
 
 
 # closestPrimes(encrypt('Regis'))
-encrypt('Regis')
-decrypt('23 9 12 12 7 5 20 6 15 15 4 21 14 5 5 4 20 15 7 5 20 3 8 1 9 14')
+# encrypt('Regis')
+# decrypt('23 9 12 12 7 5 20 6 15 15 4 21 14 5 5 4 20 15 7 5 20 3 8 1 9 14')
 
 
 # Enter Your Prime
+
+print('Please enter one of the following: \n 1 or 2')
+print('1 = Encrypt')
+print('2 = Decrypt')
+res = input()
+
+if res == '1': print('Please enter message to encrypt')
+elif res == '2': print('Please enter message to decrypt')
+else: 'Please try again'
+
+
 
