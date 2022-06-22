@@ -1,5 +1,4 @@
 from string import ascii_lowercase
-from math import sqrt, inf
 
 
 def encrypt(msg):  # Alphanumeric encryption scheme
